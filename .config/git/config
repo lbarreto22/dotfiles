@@ -3,7 +3,7 @@
 	defaultBranch = master
 [user]
 	email = lbarreto22@gmail.com
-	name = Lucas Correia
+	name = lucas
 [alias]
 	co = checkout
 	st = status
