@@ -1,0 +1,7 @@
+#!/bin/sh
+
+# Print assembly from the compilation
+
+"$@" -S -fno-ident -masm=intel -o - |
+	grep -Ev '\.(file|text|type|def|size|addrsig|weak|hidden|section|cfi|seh|byte|uleb)' |
+	grep -Ev '^\s*#' | sed 's/\s*#.*//' | c++filt

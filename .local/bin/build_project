@@ -1,0 +1,13 @@
+#!/bin/sh
+
+if [ -f ./build.sh ]; then
+	./build.sh $@
+elif [ -f ./build ]; then
+	./build $@
+elif [ -f Makefile ] || [ -f makefile ]; then
+	make $@
+else
+	echo "Build system not found"
+fi
+
+

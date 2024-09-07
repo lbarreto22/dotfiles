@@ -1,0 +1,5 @@
+#!/bin/sh
+
+# Print disassembled code from binary
+
+objdump -d -Mintel --no-show-raw-insn --visualize-jumps=color "$@"
