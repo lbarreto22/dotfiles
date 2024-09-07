@@ -1,0 +1,52 @@
+#!/bin/zsh
+
+TEXLIVE="/usr/local/texlive/2023"
+
+export PATH="$HOME/.local/bin:$TEXLIVE/bin/x86_64-linux:$PATH"
+
+export EDITOR="nvim"
+export VISUAL="nvim"
+export TERMINAL="st"
+export BROWSER="brave"
+
+export MESA_GL_VERSION_OVERRIDE=4.2
+export MESA_GLSL_VERSION_OVERRIDE=420
+
+export ASAN_OPTIONS=abort_on_error=1:print_legend=0
+
+export XDG_CONFIG_HOME=$HOME/.config
+export XDG_CACHE_HOME=$HOME/.cache
+export XDG_DATA_HOME=$HOME/.local/share
+export XDG_STATE_HOME=$HOME/.local/state
+export XDG_DATA_DIRS=/usr/local/share:/usr/share
+export XDG_CONFIG_DIRS=/etc/xdg
+
+export XINITRC=$XDG_CONFIG_HOME/x11/xinitrc
+export ZDOTDIR=$XDG_CONFIG_HOME/zsh
+export HISTFILE=$XDG_STATE_HOME/zsh/history
+export GNUPGHOME=$XDG_DATA_HOME/gnupg
+export XAUTHORITY=$XDG_RUNTIME_DIR/Xauthority
+export WINEPREFIX=$XDG_DATA_HOME/wineprefixes/default
+export PYTHONPYCACHEPREFIX=$XDG_CACHE_HOME/python
+export PYTHONUSERBASE=$XDG_DATA_HOME/python
+export TEXMFCONFIG=$XDG_CONFIG_HOME/texlive
+
+export DEVKITPRO=/opt/devkitpro
+export DEVKITARM=/opt/devkitpro/devkitARM
+export DEVKITPPC=/opt/devkitpro/devkitPPC
+
+export C_INCLUDE_PATH=$HOME/.local/include
+export CPLUS_INCLUDE_PATH=$C_INCLUDE_PATH
+export LIBRARY_PATH=$HOME/.local/lib
+export PKG_CONFIG_PATH=$LIBRARY_PATH/pkgconfig
+export MANPATH=$XDG_DATA_HOME/man:$TEXLIVE/texmf-dist/doc/man:$(manpath)
+export INFOPATH=$TEXLIVE/texmf-dist/doc/info
+
+export MAKEFLAGS="-j$(nproc)"
+
+# programing languages path
+export CARGO_HOME=$XDG_DATA_HOME/cargo
+export GOPATH=$XDG_DATA_HOME/go
+
+exec startx
+

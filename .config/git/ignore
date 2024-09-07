@@ -1,0 +1,23 @@
+# *.d
+
+# *.o
+# *.elf
+
+
+# *.gch
+# *.pch
+
+# *.lib
+# *.a
+
+# *.dll
+
+# *.exe
+# *.out
+
+# bin
+
+tags*
+compile_commands.json
+.cache/*
+

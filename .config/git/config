@@ -1,0 +1,11 @@
+[init]
+	defaltBranch = master
+	defaultBranch = master
+[user]
+	email = lbarreto22@gmail.com
+	name = Lucas Correia
+[alias]
+	co = checkout
+	st = status
+	br = branch
+	cm = commit

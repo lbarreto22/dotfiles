@@ -1,0 +1,17 @@
+#!/bin/sh
+
+[ -f $XINITRC ] && alias startx="startx $XINITRC"
+
+alias ls="ls -hN --group-directories-first"
+
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias dotfiles="/usr/bin/git --git-dir=$HOME/dotfiles --work-tree=$HOME"
+
+mkcd()
+{
+	mkdir -p -- "$1" &&
+	cd    -P -- "$1"
+}
+
