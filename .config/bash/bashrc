@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+config=${XDG_CONFIG_HOME:-$HOME/.config}/shell
+
+[[ -f $config/aliasrc ]] && source $config/aliasrc
+
+# PS1="%{$fg[green]%}%~%{reset_color%} $%b"

@@ -7,7 +7,6 @@ o.mouse = 'a'
 
 o.undofile = true
 o.encoding = 'utf-8'
-o.clipboard = o.clipboard + 'unnamedplus'
 o.termguicolors = true
 o.showmode = false
 o.syntax = 'off'

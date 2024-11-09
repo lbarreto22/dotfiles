@@ -1,5 +1,0 @@
-#!/bin/sh
-
-# Set wallpaper
-
-xwallpaper --daemon --maximize $HOME/media/image/wallpaper/wallpaper-link

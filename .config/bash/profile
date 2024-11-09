@@ -1,0 +1,8 @@
+#!/bin/bash
+
+config=${XDG_HOME_CONFIG:-$HOME/.config}/shell
+
+[[ -f $config/profile ]] && source $config/profile
+
+unset config
+

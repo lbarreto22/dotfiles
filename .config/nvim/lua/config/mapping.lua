@@ -36,9 +36,25 @@ K.n.noremap("ZW", "<cmd>w!<CR>")
 K.i.noremap("<C-right>", "<esc>ea")
 K.v.noremap("<", "<gv")
 K.v.noremap(">", ">gv")
+K.v.noremap("J", ":m '>+1<CR>gv=gv")
+K.v.noremap("K", ":m '<-2<CR>gv=gv")
 
-K.n.noremap("[q", "<cmd>cprev<cr>")
-K.n.noremap("]q", "<cmd>cnext<cr>")
+-- Paste or delete without copying text to buffer
+K.x.noremap("<leader>p", "\"_dP")
+K.n.noremap("<leader>d", "\"_d")
+K.v.noremap("<leader>d", "\"_d")
+
+-- Choose when to copy from clipboard
+K.n.noremap("<leader>y", "\"+y")
+K.v.noremap("<leader>y", "\"+y")
+K.n.noremap("<leader>Y", "\"+Y")
+K.n.noremap("<leader>ç", "\"+p")
+K.v.noremap("<leader>ç", "\"+p")
+
+K.n.noremap("<C-k>", "<cmd>cprev<cr>zz")
+K.n.noremap("<C-j>", "<cmd>cnext<cr>zz")
+K.n.noremap("<leader>k", "<cmd>lprev<cr>zz")
+K.n.noremap("<leader>j", "<cmd>lnext<cr>zz")
 
 K.n.noremap("<leader>t", "<cmd>sp<cr><cmd>terminal<cr>")
 K.n.noremap("<leader>vt", "<cmd>vsp<cr><cmd>terminal<cr>")

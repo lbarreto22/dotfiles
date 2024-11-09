@@ -1,12 +1,16 @@
-setwall &
 dwmblocks &
 picom &
-xrandr -s 1920x1080 &
-# sudo mount -t vboxsf VM_shared /mnt/shared
 
+#pipewire &
+#pipewire-pulse &
+#wireplumber &
+
+feh --bg-scale $XDG_PICTURES_HOME/dragon-ball.jpg
+
+xrandr --output LVDS1 --off --output HDMI1 --auto
 xset r rate 300 50
 #xmodmap -e "keycode 9  = Caps_Lock"
 #xmodmap -e "keycode 66 = Escape"
 
-exec dwm
+exec dbus-launch --exit-with-session dwm
 
